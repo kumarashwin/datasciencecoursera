@@ -75,6 +75,6 @@ runAnalysis <- function(){
     finalData <- finalData[ ,c(2,1,3:68)]
     
     #--- end ---
-    write.csv(finalData, file="tidyData.csv")
+    write.table(finalData, file="tidyData.txt", row.names = FALSE)
     return(finalData)
 }
