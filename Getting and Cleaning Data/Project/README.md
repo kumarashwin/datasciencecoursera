@@ -31,4 +31,4 @@ How to use the program:
 2. In the same directory which now contains the 'UCI HAR Dataset' directory, download or `git clone` this directory, or just the ```run_analysis.R``` file.
 3. **ATTENTION:** You have to now use the `setwd()` command in R, or RStudio to set the directory with ```run_analysis.R``` and the 'UCI HAR dataset' directory as the working director.
 4. Following that you may import the function using `source('./run_analysis.R')`
-5. You may now run the function with `data <- runAnalysis()`. The resulting data will be stored in the `data` variable, but also in a newly created .csv file named, 'tidyData.csv' in the same folder as the program.
+5. You may now run the function with `data <- runAnalysis()`. The resulting data will be stored in the `data` variable, but also in a newly created .txt file named, 'tidyData.txt' in the same folder as the program.

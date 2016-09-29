@@ -95,7 +95,6 @@ How the program works:
 1. The files `subject_test.txt`,`y_test.txt`, and `X_test.txt` from the `test` directory are read as tables into the variables: `testSubjects`,`testActivities` and `testReadings`, respectively.
 2. The column names are read from `features.txt` into `fieldNames` whereupon we ignore the sequence and go directly for the names of the fields.
 3. The field names are assigned as column names and all three of the above mentioned tables are column-bound with `cbind` into a single variable: `finalTest`
-
 4. Similarly, corresponding files are read from the `train` directory into variables, coalesced with `cbind` again, and finally, merged with the previous `finalTest` to form the variable `finalData` that we will now work on.
 
 We have effectively completed steps 1 & 4 from the requested course work.
@@ -104,4 +103,4 @@ We have effectively completed steps 1 & 4 from the requested course work.
 6. Activity names i.e. WALKING, RUNNING etc. are now read from `activity_labels.txt`, discarding the numbers in the first column again, and are then used to subsitute the corresponding activity numbers from each of the rows.
 7. We are almost done; we now calculate the means of the 'mean' columns and 'standard deviation' through first breaking the `finalData` table by each subject, then running an àggregate` function to aggregate the data to which the function is applied, by Activity.
 8. A minor step towards beautification: the order of columns is changed to have the 'Subject' column take precedence.
-9. The final, tidy data is written to the `tidyData.csv`, and then returned to the console to be stored in a variable, if one was provided.
+9. The final, tidy data is written to the `tidyData.text`, and then returned to the console to be stored in a variable, if one was provided.
