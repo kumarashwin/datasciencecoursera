@@ -1,4 +1,13 @@
-#PLACE THIS FILE IN THE SAME FOLDER AS 'UCI HAR Dataset'
+# PLACE THIS FILE IN THE SAME FOLDER AS 'UCI HAR Dataset'
+# AND MAKE SURE TO SET THAT FOLDER AS YOUR WORKING DIRECTORY
+
+#Title: run_analysis.R
+#Author: Ash Kumar (https://github.com/kumarashwin/)
+#Date: September 29, 2016
+
+# The following function reads data collected from the UCI HAR Dataset
+# and assembles a tidy dataset that is then returned to the caller of
+# the function.
 runAnalysis <- function(){
     
     #--- test ---
@@ -30,7 +39,7 @@ runAnalysis <- function(){
     #--- uniting the two data frames ---
     finalData <- rbind(finalTest, finalTrain)
     
-    #--- subsetting ---
+    #--- subsetting to result in only those columns that are requested ---
     colsToSubset <- c(1:8, 43:48, 83:88, 123:128, 163:168, 203:204, 216:217, 229:230, 242:243, 255:256, 268:273, 347:352, 426:431, 505:506, 518:519, 531:532, 544:545)
     subsettedData <- finalData[colsToSubset]
     
@@ -66,5 +75,6 @@ runAnalysis <- function(){
     finalData <- finalData[ ,c(2,1,3:68)]
     
     #--- end ---
+    write.csv(finalData, file="tidyData.csv")
     return(finalData)
 }
